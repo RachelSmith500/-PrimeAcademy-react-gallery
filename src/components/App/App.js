@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
+import axios from 'axios';
+import GalleryList from '../GalleryList/GalleryList'
 
 class App extends Component {
 
+  state = {
+    galleryItems: [],
+    newItem: {
+      path: '',
+      description: '',
+      likes: 0
+    }
+  }
+
   componentDidMount = () => {
-    console.log(this.props.galleryItems);
+    console.log(this.state.galleryItems);
   }
   render() {
     return (
@@ -15,7 +26,7 @@ class App extends Component {
         <br/>
         <p>Gallery goes here</p>
         {this.props.galleryItems.map((image) =>{
-                return <HeroDisplay image={image}/>
+                return <GalleryList image={image}/>
              })}
         {/* <img src="images/goat_small.jpg"/> */}
         {/* <img src="1.png"/> */}
