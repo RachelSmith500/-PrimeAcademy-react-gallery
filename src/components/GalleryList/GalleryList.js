@@ -3,6 +3,7 @@ import GalleryItems from '../GalleryItems/GalleryItems'
 
 class GalleryList extends Component {
     render(){
+        console.log(this.props.galleryOfImages)
         return(
             <>
               {this.props.galleryOfImages.map((image) => { 
