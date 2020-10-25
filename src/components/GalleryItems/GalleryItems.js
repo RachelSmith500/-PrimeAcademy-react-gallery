@@ -14,6 +14,7 @@ class GalleryItems extends Component {
     }
     render(){
             const image = this.props.image
+            console.log(image)
         return(
             <>
              <div className="imageWrapper" onClick={this.aliasUpdate}>

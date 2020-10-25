@@ -48,7 +48,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <GalleryList galleryOfImages={this.state.galleryList}/>
+        <GalleryList galleryOfImages={this.state.galleryItems} likeCount={this.likeCount}/>
     
         {/* <img src="images/goat_small.jpg"/> */}
         {/* <img src="1.png"/> */}
