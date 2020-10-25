@@ -5,6 +5,8 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "^3.4.0"
@@ -30,18 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RachelSmith500/-PrimeAcademy-react-gallery.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RachelSmith500/-PrimeAcademy-react-gallery/issues"
-  },
-  "homepage": "https://github.com/RachelSmith500/-PrimeAcademy-react-gallery#readme"
+  }
 }

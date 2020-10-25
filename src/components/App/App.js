@@ -6,16 +6,29 @@ import GalleryList from '../GalleryList/GalleryList'
 class App extends Component {
 
   state = {
-    galleryItems: [],
-    newItem: {
+    galleryItems: [
+    {
+      id:'',
       path: '',
       description: '',
       likes: 0
     }
+  ]
   }
 
   componentDidMount = () => {
-    console.log(this.state.galleryItems);
+    this.getImages();
+  }
+
+  getImages = () => {
+    axios.get('/gallery')
+    .then(response => {
+      this.setState({
+        galleryItems:response.data
+      })
+      }).catch(error => {
+        alert('error in get')
+      })
   }
   render() {
     return (
