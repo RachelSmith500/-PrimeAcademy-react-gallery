@@ -21,3 +21,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+main {
+  width: 80%;
+  margin: auto;
+}
+.imageWrapper {
+  display: inline-block;
+  padding: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  border: 1px solid  black ;
+}

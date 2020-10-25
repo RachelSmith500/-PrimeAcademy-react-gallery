@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class GalleryItems extends Component {
     state = {
-        showAlias: false
+        showAlias: true
     }
 
     aliasUpdate = () => {
