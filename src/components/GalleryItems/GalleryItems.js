@@ -23,8 +23,9 @@ class GalleryItems extends Component {
                 :
                     <p>{image.description}</p>
                 }
-               
             </div>
+            <button onClick={() => this.props.likeCount(image.id)}>Like</button>
+            <p>{image.likes} : Total Likes</p>
             </>
         )
     }
