@@ -13,19 +13,17 @@ class GalleryItems extends Component {
         })
     }
     render(){
+            const image = this.props.image
         return(
             <>
-             <div className="heroWrapper">
-                <h3>{this.props.image.path}</h3>
+             <div className="imageWrapper" onClick={this.aliasUpdate}>
                 {/* conditional render using ternary operator*/}
-                {this.props.props.description ?
-                    <p>is on duty</p>
+                {this.state.showAlias ?
+                    <img src={image.path}/> 
                 :
-                    <p>is not on duty</p>
+                    <p>{image.description}</p>
                 }
-                <br/>
-                <button onClick={this.aliasUpdate}>show alias</button>
-   
+               
             </div>
             </>
         )

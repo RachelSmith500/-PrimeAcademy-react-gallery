@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList'
+import galleryItems from '../GalleryItems/GalleryItems'
 
 class App extends Component {
 
@@ -16,7 +17,7 @@ class App extends Component {
   ]
   }
 
-  componentDidMount = () => {
+  componentDidMount(){
     this.getImages();
   }
 
@@ -38,9 +39,8 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        {this.props.galleryItems.map((image) =>{
-                return <GalleryList image={image}/>
-             })}
+        <GalleryList/>
+    
         {/* <img src="images/goat_small.jpg"/> */}
         {/* <img src="1.png"/> */}
       </div>
