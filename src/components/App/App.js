@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount = () => {
+    console.log(this.props.galleryItems);
+  }
   render() {
     return (
       <div className="App">
@@ -10,7 +14,10 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        {this.props.galleryItems.map((image) =>{
+                return <HeroDisplay image={image}/>
+             })}
+        {/* <img src="images/goat_small.jpg"/> */}
         {/* <img src="1.png"/> */}
       </div>
     );
