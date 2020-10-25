@@ -31,6 +31,15 @@ class App extends Component {
         alert('error in get')
       })
   }
+  likeCount = (id) => {
+    axios.put(`/gallery/like/${id}`)
+    .then(response => {
+      this.getImages();
+     
+      }).catch(error => {
+        alert('error in PUT')
+      })
+  }
   render() {
     return (
       <div className="App">
@@ -39,7 +48,7 @@ class App extends Component {
         </header>
         <br/>
         <p>Gallery goes here</p>
-        <GalleryList galleryOfImages={this.state.galleryItems}/>
+        <GalleryList galleryOfImages={this.state.galleryList}/>
     
         {/* <img src="images/goat_small.jpg"/> */}
         {/* <img src="1.png"/> */}
